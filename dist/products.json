@@ -1,0 +1,12 @@
+[
+   {
+        "id":  1,
+        "product_name": "Jeans",
+        "qty": 2
+    },
+    {
+        "id":  2,
+        "product_name": "Tees",
+        "qty": 5
+    }
+]

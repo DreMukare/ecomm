@@ -1,10 +1,25 @@
 const path = require("path");
+const uglifyJSPlugin = require("uglifyjs-webpack-plugin");
 module.exports = {
-    entry: "./src/index.js",
+    entry: {
+        index: "./src/index.js",
+        search: "./src/search.js",
+        dashboard: "./src/dashboard.js"
+    },
     output: {
         // globalObject: "this",
-        filename: "main.js",
+        filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        },
+        minimizer: [new uglifyJSPlugin()]
+    },
+    devServer : {
+        contentBase : path.join(__dirname, "dist"),
+        path: 9000
     },
     module: {
         rules: [
