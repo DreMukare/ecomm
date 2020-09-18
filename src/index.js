@@ -1,5 +1,6 @@
 const form = document.getElementById("form");
-const row = document.querySelector(".row")
+const row = document.querySelector(".row");
+
 form.addEventListener("submit", function(e){
     e.preventDefault();
     fetch("https://reqres.in/api/login", {
@@ -12,6 +13,7 @@ form.addEventListener("submit", function(e){
     })
     .then(res => res.json())
     .then(data => {
+        console.log(data);
                 location.href = '/dist/dashboard.html'
     })
 })

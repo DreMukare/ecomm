@@ -1,1 +1,4 @@
-# ecomm
+- Clone the repo
+- cd into the directory of just downloaded folder
+- open terminal and run `npm run install` this will install required plugin
+- head over to index.html in `/dist` folder and open the page with live-server (supposing you have live server plugin installed)

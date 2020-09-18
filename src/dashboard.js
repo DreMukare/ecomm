@@ -21,7 +21,7 @@ var options = {
       text: 'Sales Dashboard'
     },
     subtitle: {
-        text: `Total Sale ${}`
+        text: 'Total Sale'
     },
     xAxis: {
      // type: 'datetime',

@@ -11,15 +11,15 @@ module.exports = {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
     },
+    devServer : {
+        contentBase : path.join(__dirname, "dist"),
+        // path: 9000
+    },
     optimization: {
         splitChunks: {
             chunks: 'all'
         },
         minimizer: [new uglifyJSPlugin()]
-    },
-    devServer : {
-        contentBase : path.join(__dirname, "dist"),
-        path: 9000
     },
     module: {
         rules: [
@@ -33,39 +33,6 @@ module.exports = {
                     }
                 }
             },
-    //         {
-    //             test: /\.html$/,
-    //             use: [
-    //                 {
-    //                     loader: "html-loader",
-    //                     options: {minimize : true}
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             test: /\.(png|svg|jpg|gif)/,
-    //             use: [
-    //                 'file-loader'
-    //             ]
-    //         },
-    //         {
-    //             test: /\.scss$/,
-    //             use : [
-    //                 "css-loader",
-    //                 "sass-loader"
-    //             ]
-    //         }
-    //     ]
-    // },
-    // plugins: [
-    //   new HtmlWebPackPlugin({
-    //       template: "./src/index.html",
-    //       filename: "./index.html"
-    //   }),
-    //   new MiniCssExtractPlugin({
-    //       filename: "[name].css",
-    //       chunkFilename: "[id].css"
-    //   })  
     ]
 }
 }
